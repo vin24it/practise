@@ -2,29 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="m1.css">
     <title>Document</title>
 </head>
+</style>
 <body>
-    <table>
-        <tr>
-            <td class="bTop" colspan="3">vrc
-            </td>
-        </tr>
-        <tr>
-            <td class="bLeft" >vinit
-            </td>
-            <td class="middle" >ramji
-            </td>
-            <td class="bRight" >choughule
-            </td>
-        </tr>
-        <tr>
-            <td class="bBottom" colspan="3" >rvc
-            </td>
-        </tr>                                                    
-    </table>
+    <script>
+        let obj=[{"name":"john","age":"30","car":"honda","address":
+        [{"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"home"},
+        {"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"office"},
+        {"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"others"}]},
+        {"name":"pawan","age":"30","car":"honda","address":
+        [{"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"home"},
+        {"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"office"},
+        {"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"others"}]},
+        {"name":"jack","age":"30","car":"honda","address":
+        [{"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"home"},
+        {"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"office"},
+        {"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"others"}]}]
+obj.forEach(function (itm) {
+    console.log(itm.name,itm.address)
+}) 
+    </script>
+        <center>
+        <table>
+            <tr>
+                <th>Name
+                    <br><input type="text" name="name">
+                </th>
+                <th>Age
+                    <br><input type="text" name="age">
+                </th>
+                <th>Cars
+                    <br><input type="text" name="cars">
+                </th>
+            </tr>
+            <tr>
+                <td>Address</td>
+            </tr>
+            <tr>
+                <td>Home
+                    <br>
+                    <textarea name="home" id="hadd" cols="30" rows="10"></textarea>
+                </td>
+                <td>Office <br>
+                    <textarea name="office" id="offadd" cols="30" rows="10"></textarea>
+                </td>
+                <td>others <br>
+                    <textarea name="others" id="othadd" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+        </table>
+    </center>
 </body>
 </html>

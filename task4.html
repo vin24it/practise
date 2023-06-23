@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student REGISTRATION</title>
+    <style>
+        .main-form{
+            align-items: center;
+            background-color: aqua;
+            text-align: left;
+            height: 100%;
+            margin-left: 25%;
+            margin-right: 25%;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .button{
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-form">
+        <form action="post"></form>
+        <h1>STUDENT REGISTRATION FORM</h1>
+        <div class="name">
+            Full Name <br>
+            <input type="text" class="name" placeholder="Enter Name Here">
+        </div>
+        <div class="email">
+            Email <br>
+            <input type="email" class="email" placeholder="Enter Email Here">
+        </div>
+        <div class="dob">
+            Birth Of Date <br>
+            <input type="date" name="dob" id="d1" placeholder="Enter Your Birth Of date">
+        </div>
+        <div class="contact">
+            contact <br>
+            <input type="text" class="contact" placeholder="Enter Here Your Contact Details">
+        </div>
+        <div class="gender">
+            gender <br>
+            <input type="radio" name="male" id="male">male
+            <input type="radio" name="female" id="female">Female
+            <input type="radio" name="others" id="others">Others
+        </div>
+        <div class="address">
+            Address <br>
+            <input type="text" class="address" placeholder="Enter Address Here">
+        </div>
+        <div class="sch-details">
+            School
+            <select>
+                <option value="" selected>select your beverage</option>
+                <option value="tea">Tea</option>
+                <option value="coffee">Coffee</option>
+                <option value="soda">Soda</option>
+            </select>
+            Cource 
+            <select>
+                <option value="" selected>select your beverage</option>
+                <option value="tea">Tea</option>
+                <option value="coffee">Coffee</option>
+                <option value="soda">Soda</option>
+            </select>
+        </div>
+        <div class="button">
+            <input type="button" value="submit">
+            <input type="button" value="reset">
+        </div>
+    </form>
+    </div>
+</body>
+</html>
