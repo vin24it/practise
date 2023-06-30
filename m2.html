@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Json Example</h1>
+    <table border="1px">
+        <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>car</th>
+        <th>address</th>
+        </tr>
+        <tbody id="myTable">
+
+        </tbody>
+     </table>
+     <script>
+        let obj=[{"name":"john","age":"30","car":"honda","address":
+        [{"bid_no":"a1","landmark":"krupa complex","pincode":"421306","state":"maharashtra","phone":"1234","type":"home"},
+        {"bid_no":"a2","landmark":"shraddha colony","pincode":"21378","state":"goa","phone":"1234","type":"office"},
+        {"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"others"}]},
+        {"name":"pawan","age":"30","car":"honda","address":
+        [{"bid_no":"12","landmark":"qwer","pincode":"233","state":"fsfg","phone":"1234","type":"home"},
+        {"bid_no":"21","landmark":"ertygh","pincode":"43254","state":"dsgfsg","phone":"12354","type":"office"},
+        {"bid_no":"34","landmark":"ghfterhy","pincode":"2344","state":"sgrg","phone":"32545","type":"others"}]},
+        {"name":"jack","age":"30","car":"honda","address":
+        [{"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"home"},
+        {"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"office"},
+        {"bid_no":"","landmark":"","pincode":"","state":"","phone":"","type":"others"}]}]
+        buildTable(obj)
+function buildTable(data){
+    let table = document.getElementById('myTable')
+    
+    for (var i = 0; i < data.length; i++){
+    let row = `<tr>
+    <td>${data[i].name}</td>
+    <td>${data[i].age}</td>
+    <td>${data[i].car}</td>
+    <td>`
+    var addresses = data[i].address;
+    for(let j= 0; j< addresses.length; j++){
+    console.log(addresses[j].bid_no)
+    row +=`<span>${addresses[j].bid_no} ${addresses[j].landmark} ${addresses[j].pincode} ${addresses[j].state}<span>`;
+    }
+    
+    `</td>
+    </tr>`
+    table.innerHTML += row
+    }
+    }
+     </script>
+</body>
+</html>
