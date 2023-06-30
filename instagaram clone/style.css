@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+.box1{
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 30%;
+    margin-right: 30px;
+    height: 400px;
+    width: 350px;
+}
+.logo img{
+    height: 50px;
+    width: 175px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.username {
+    height: 50px;
+    width: 100%;
+}
+.username input{
+    height: 25px;
+    width: 258px;
+    padding: 9px 0px 7px 8px;
+    margin-left: 15%;
+    border: 1px solid #DBDBDB;
+    background-color: #FAFAFA;
+}
+.password{
+    height: 55px;
+    width: 100%;
+}
+.password input{
+    height: 25px;
+    width: 258px;
+    padding: 9px 0px 7px 8px;
+    margin-left: 15%;
+    margin-top: 10px;
+    border: 1px solid #DBDBDB;
+    background-color: #FAFAFA;
+}
+.signup button{
+    color: white;
+    background-color: #4CB5F9;
+    height: 32px;
+    width: 268px;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-left: 15%;
+    border: none;
+}
+.or{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+.or p{
+    margin-left: 15px;
+    font-size: 0.9rem;
+    color: #7C7773;
+}
+.fb{
+    display: flex;
+    justify-content: center;
+}
+.fb i{
+    margin: 0px 8px 0px 0px;
+    font-size: 16px;
+    color: #385185;
+}
+.fb a{
+    color: #385185;
+    text-decoration: none;
+}
+.fp a{
+    color: #00376B;
+    text-decoration: none;
+    margin-left: 35%;
+    font-size: 0.8rem;
+}
+.fp{
+    margin-top: 20px;
+}
+.box2{
+    height: 65px;
+    width: 350px;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 20px;
+    display: flex;
+}
+.box2 p{
+    margin-top: 20px;
+    margin-left: 20%;
+}
+.box2 a{
+    margin-top: 20px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: #0095f6;
+    font-weight: 500;
+}
+.box3{
+    height: 65px;
+    width: 350px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 20px;
+}
+.box3 img{
+    height: 40px;
+    width: 135px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.box3 p{
+    text-align: center;
+}
+.links a{
+    text-decoration: none;
+    color: grey;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.links{
+    margin-top: 60px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.cont{
+    color: gray;
+    text-align: center;
+}
