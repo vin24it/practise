@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="task10.css">
+</head>
+<body>
+    <div class="fullimg" id="fulimgbox">
+        <img src="https://media.istockphoto.com/id/1029523462/photo/full-frame-shot-of-succulent-plant.jpg?s=612x612&w=0&k=20&c=JAoyLdUfOEW3EQ_qWzHeOUnkOYqRbUnZJMUU13zerPM=" alt="" id="fulimg" onmouseover="closeFullImg()">
+    </div>
+    <table border="1px" class="mytable" id="table">
+        <tr>
+            <td><img src="https://media.istockphoto.com/id/1029523462/photo/full-frame-shot-of-succulent-plant.jpg?s=612x612&w=0&k=20&c=JAoyLdUfOEW3EQ_qWzHeOUnkOYqRbUnZJMUU13zerPM=" alt="" onclick="openFullImg(this.src)"></td>
+            <td><img src="https://media.istockphoto.com/id/1468506905/photo/aerial-view-of-cherry-organic-tea-mountain.jpg?s=612x612&w=0&k=20&c=tMZ1TUJZyP7AjTktS_pPdAQimKcwGG4nVc4t-x_G8UI=" alt="" onclick="openFullImg(this.src)"></td>
+            <td><img src="https://media.istockphoto.com/id/1124860235/photo/many-colorful-jellyfish-on-the-dark-sea.jpg?s=612x612&w=0&k=20&c=7Uk9JyjxFN3mEwqZO7WUvAXBKvqVXxMvrZxAAPlVXNk=" alt="" onclick="openFullImg(this.src)"></td>
+        </tr>
+        <tr>
+            <td><img src="https://media.istockphoto.com/id/1138569057/photo/pine-trees-in-forest-during-winter.jpg?s=612x612&w=0&k=20&c=_rvaKQ-sELjMCtij7IEx7TnB750MYqEiNSwxeo0vwdY=" alt="" onclick="openFullImg(this.src)"></td>
+            <td><img src="https://media.istockphoto.com/id/1058434110/photo/close-up-of-abstract-against-colored-background.jpg?s=612x612&w=0&k=20&c=jDs2wE7Kkhq4Gg7wPTX9VYUo66xwTE71pC8Y0JYafBE=" alt="" onclick="openFullImg(this.src)"></td>
+            <td><img src="https://media.istockphoto.com/id/1481468103/photo/wind-turbines-in-the-sea.jpg?s=612x612&w=0&k=20&c=ZUAWTJhuV6qqeQ_HDAVCQEpEMu9aWtgY0yJbdFOr7do=" alt="" onclick="openFullImg(this.src)"></td>
+        </tr>
+        <tr>
+            <td><img src="https://media.istockphoto.com/id/1472507642/photo/cgi-abstract-planets-descending-to-earth.jpg?s=612x612&w=0&k=20&c=Rb7QfXXKEscbMVoyDssK20f6GXci5Aua7vl7-2emM7I=" alt="" onclick="openFullImg(this.src)"></td>
+            <td><img src="https://media.istockphoto.com/id/1461631327/photo/abstract-art-backgrounds.jpg?s=612x612&w=0&k=20&c=wWksIUzQNwnLzUcqrssvt0jFdWdPklk9-VNWZv5X5dU=" alt="" onclick="openFullImg(this.src)"></td>
+            <td><img src="https://media.istockphoto.com/id/1449307455/photo/fingerprint-authentication-button-biometric-security.jpg?s=612x612&w=0&k=20&c=F9S1Ejk2RJV5-jxKSK-8_iMggUqqqjs9S_R708NKpeA=" alt="" onclick="openFullImg(this.src)"></td>
+        </tr>
+    </table>
+    <script>
+        var fullImgBox =document.getElementById("fulimgbox");
+        var fullImg =document.getElementById("fulimg");
+        function openFullImg(pic){
+            fullImgBox.style.display="flex";
+            fullImg.src =pic;
+        }
+        function closeFullImg(){
+            fullImgBox.style.display="none";
+        }
+    </script>
+</body>
+</html>
