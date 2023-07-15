@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ttask11.css">
+</head>
+<body>
+    <table class="table1">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" id="name" /></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="email" id="email" /></td>
+        </tr>
+        <tr>
+            <td>Phone No</td>
+            <td><input type="text" name="phone" id="phone" /></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" name="address" id="address" /></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Add Record" onClick="addRow()" id="add"></td>
+            <td><button onclick="document.getElementById('table-body').deleteRow(1)">Delete Record</button></td>
+        </tr>
+    </table>
+
+    <table id="table" border="1" class="table2">
+        <thead id="table-head">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone no</th>
+            <th>Address</th>
+        </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+
+    <input type="button" id="btnSubmit" value="Submit" onclick="Convert()" class="subut" />
+
+    <script>
+        function addRow() {
+  
+    var tableBody = document.getElementById("table-body");
+    var td1 = document.createElement("td");
+    var td2 = document.createElement("td");
+    var td3 = document.createElement("td");
+    var td4 = document.createElement("td");     
+    var row = document.createElement("tr");
+    
+    td1.innerHTML = document.getElementById("name").value;
+    td2.innerHTML  = document.getElementById("email").value;
+    td3.innerHTML  = document.getElementById("phone").value;
+    td4.innerHTML  = document.getElementById("address").value;
+    
+    row.appendChild(td1);
+    row.appendChild(td2);
+    row.appendChild(td3);
+    row.appendChild(td4);
+    
+    tableBody.appendChild(row);
+    }
+
+    function Convert() {
+            var table = document.getElementById("table");
+            var header = [];
+            var rows = [];
+
+            for (var i = 0; i < table.rows[0].cells.length; i++) {
+                header.push(table.rows[0].cells[i].innerHTML);
+            }
+
+            for (var i = 1; i < table.rows.length; i++) {
+                var row = {};
+                for (var j = 0; j < table.rows[i].cells.length; j++) {
+                    row[header[j]] = table.rows[i].cells[j].innerHTML;
+                }
+                rows.push(row);
+            }
+
+            console.log(JSON.stringify(rows));
+        }
+    </script>
+</body>
+</html>

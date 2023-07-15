@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="preLoad()">
+    <form autocomplete="off">
+        Select Backaground :
+        <input type="radio" name="1" onclick="im('a1');" checked>image1
+        <input type="radio" name="1" onclick="im('a2');">image2
+        <input type="radio" name="1" onclick="im('a3');">image3 <br>
+        Select Font Family :
+        <input type="radio" onclick="myFunction()">Sansirf <br>
+        Select Font Colour
+        <input type="radio" onclick="myFunction1('v1')" name="color">Red
+        <input type="radio" onclick="myFunction1('v2')" name="color">Green
+        <input type="radio" onclick="myFunction1('v3')" name="color">Blue <br>
+        Select Font Size:
+        <input type="range" name="" id="fontinput" value="10" min="5" max="50" oninput="fontoutput.value=fontinput.value" />
+        <output id="fontoutput">10</output>
+        <button onclick="fontsizechg()">Click Here</button> <br>
+        Write Quote Here:
+        <input type="text" oninput="quote(this)" class="input" placeholder="Enter the Quote Here!!!">
+    </form>
+    <div class="op">
+        <img src="https://images.pexels.com/photos/17070558/pexels-photo-17070558/free-photo-of-symmetry.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id="a" width="500" height="500">
+        <p id="demo" class="input">This is Vinit</p>
+    </div>
+    
+    <script>
+        function preLoad(){
+            a1 = new Image; a1.src ='https://images.pexels.com/photos/17070558/pexels-photo-17070558/free-photo-of-symmetry.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load';
+            a2 = new Image; a2.src ='https://images.pexels.com/photos/14117832/pexels-photo-14117832.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load';
+            a3 = new Image; a3.src ='https://images.pexels.com/photos/17550389/pexels-photo-17550389/free-photo-of-the-scale.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load';
+        }
+        function im(image){
+            document.getElementById(image[0]).src = eval(image +".src")
+        }
+        function myFunction() {
+            document.getElementById("demo").style.fontFamily = "Impact,Charcoal,sans-serif";
+        }
+        function myFunction1(){
+            v1 = document.getElementById("demo").style.color='red';
+            v2 = document.getElementById("demo").style.color='green';
+            v3 = document.getElementById("demo").style.color='pink';
+        }
+        function myFunction2(){
+            document.getElementById("demo").style.fontSize='50px';
+        }
+        function quote(name){
+            document.getElementById('demo').innerText=name.value;
+        }
+        function fontsizechg(){
+            document.style.fontSize=fontoutput.value;
+        }
+    </script>
+</body>
+</html>

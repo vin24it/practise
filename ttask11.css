@@ -1,0 +1,18 @@
+.table1 {
+    margin: auto;
+    border: none;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    padding-bottom: 5%;
+}
+.table1 td{
+    padding: 10px;
+}
+.table2{
+    margin: auto;
+}
+.subut{
+    margin-left: 50%;
+    margin-top: 5%;
+}
